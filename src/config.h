@@ -1,6 +1,7 @@
 #ifndef _Config_h
 #define _Config_h
 
+#include <Arduino.h>
 #include <EEPROM.h>
 
 typedef enum datatype_enum : byte {

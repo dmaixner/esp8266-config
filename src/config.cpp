@@ -1,13 +1,13 @@
 #include "config.h"
 
-static void Config::write_config_eeprom(config_t &config, int offset)
+void Config::write_config_eeprom(config_t &config, int offset)
 {
     EEPROM.begin(offset + sizeof(config_t));
     EEPROM.put(offset, config);
     EEPROM.end();
 }
 
-static void Config::read_config_eeprom(config_t &config, int offset);
+void Config::read_config_eeprom(config_t &config, int offset)
 {
     EEPROM.begin(offset + sizeof(config_t));
     EEPROM.get(offset, config);
