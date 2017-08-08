@@ -10,22 +10,22 @@ typedef enum datatype_enum : byte {
 
 typedef struct config_struct
 {
-    char wifi_ssid[20];
-    char wifi_pass[20];
-    char thingspeak_channel_id[10];
-    char thingspeak_write_key[20];
-    char data_field[10];
-    datatype_t data_type;
-    byte data_id;
+    char wifiSsid[20];
+    char wifiPass[20];
+    char thingspeakChannelId[10];
+    char thingspeakWriteKey[20];
+    char dataField[10];
+    datatype_t dataType;
+    byte dataId;
 } config_t;
 
 class Config
 {
   public:
-    static void write_config_eeprom(config_t &config, int offset);
-    static void read_config_eeprom(config_t &config, int offset);
-    static void print_config(String label, config_t &config);
-    static void print_stats();
+    static void writeConfigEEPROM(config_t &config, int offset);
+    static void readConfigEEPROM(config_t &config, int offset);
+    static void printConfig(String label, config_t &config);
+    static void printStats();
 };
 
 #endif
