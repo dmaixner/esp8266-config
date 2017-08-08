@@ -3,11 +3,11 @@
 
 #include <EEPROM.h>
 
-typedef enum datatype_t : byte {
+typedef enum datatype_enum : byte {
     TEMPERATURE
-};
+} datatype_t;
 
-typedef struct
+typedef struct config_struct
 {
     char wifi_ssid[20];
     char wifi_pass[20];
