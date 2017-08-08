@@ -29,9 +29,6 @@ void Config::printConfig(String label, config_t &config)
 
 void Config::printStats()
 {
-#ifdef WiFi_h
-    Serial.printf("RSSI: %d dBm\n", WiFi.RSSI());
-#endif
     Serial.printf("Config size: %d\n", sizeof(config_t));
     Serial.println("Reset reason: " + ESP.getResetReason());
     Serial.printf("Free heap: %d\n", ESP.getFreeHeap());
