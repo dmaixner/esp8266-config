@@ -1,5 +1,5 @@
-# NodeMCU ESP8266 Configuration library
-Configuration library used to read/write struct objects from/to EEPROM.
+# ESP8266 Configuration library
+Configuration library used to read/write struct objects from/to EEPROM on ESP8266 based boards like NodeMCU and Wemos D1 mini.
 
 # Usage
 
