@@ -1,6 +1,6 @@
 {
     "name": "Config",
-    "description": "Configuration library used to read/write struct objects from/to EEPROM.",
+    "description": "Configuration library used to read/write struct objects from/to EEPROM on ESP8266 based boards like NodeMCU and Wemos D1 mini.",
     "keywords": "configuration, config, eeprom",
     "authors": 
         {
@@ -11,7 +11,7 @@
         },
     "repository": {
         "type": "git",
-         "url": "https://github.com/dmaixner/esp8266-nodemcu-config"
+         "url": "https://github.com/dmaixner/esp8266-config"
     },
     "version": "1.0.0",
     "frameworks": "arduino",
