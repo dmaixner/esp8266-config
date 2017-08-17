@@ -1,4 +1,5 @@
-#include "config.h"
+#include <EEPROM.h>
+#include "Config.h"
 
 void Config::writeConfigEEPROM(config_t &config, int offset)
 {

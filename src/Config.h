@@ -2,7 +2,6 @@
 #define _config_h
 
 #include <Arduino.h>
-#include <EEPROM.h>
 
 /**
 * list of all config options:
