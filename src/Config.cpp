@@ -37,13 +37,13 @@ void Config::printConfig(String label, config_t &config)
     Serial.print("- ChaCha key: ");
     for (byte i = 0; i < 32; i++)
     {
-        Serial.printf("%x", config.chaChaKey);
+        Serial.printf("%x ", config.chaChaKey[i]);
     }
     Serial.println();
     Serial.print("- ChaCha auth: ");
     for (byte i = 0; i < 16; i++)
     {
-        Serial.printf("%x", config.chaChaAuth);
+        Serial.printf("%x ", config.chaChaAuth[i]);
     }
     Serial.println();
 #endif
