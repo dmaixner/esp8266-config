@@ -9,7 +9,9 @@ This library provides data type `config_t`, which is generated according to dyna
 --------------|-----------------------------------
 _config_option_wifi|`char wifiSsid[20]`, `char wifiPass[20]`
 _config_option_thingspeak|`char thingspeakChannelId[10]`, `char thingspeakWriteKey[20]`, `byte thingspeakField`
-_config_option_sensors|`byte sensorCount[SENSOR_TYPE_COUNT]`
+_config_option_dallas|`byte dallasPin`
+_config_option_chacha|`byte chaChaKey[32]`, `byte chaChaAuth[16]`
+
 
 Library also provides static methods in `Config` class for read/write those data from/to EEPROM and print information to Serial:
 ```C

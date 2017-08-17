@@ -22,14 +22,30 @@ void Config::printConfig(String label, config_t &config)
     Serial.printf("- WiFi SSID: %s\n", config.wifiSsid);
     Serial.printf("- WiFi password: %s\n", config.wifiPass);
 #endif
+
 #ifdef _config_option_thingspeak
     Serial.printf("- Thingspeak channel ID: %s\n", config.thingspeakChannelId);
     Serial.printf("- Thingspeak write key: %s\n", config.thingspeakWriteKey);
     Serial.printf("- Thingspeak field: %d\n", config.thingspeakField);
 #endif
-#ifdef _config_option_sensors
-    Serial.printf("- Dallas sensor count: %d\n", config.sensorCount[DALLAS]);
-    Serial.printf("- DHT11 sensor count: %d\n", config.sensorCount[DHT11]);
+
+#ifdef _config_option_dallas
+    Serial.printf("- Dallas pin: %d\n", config.dallasPin);
+#endif
+
+#ifdef _config_option_chacha
+    Serial.print("- ChaCha key: ");
+    for (byte i = 0; i < 32; i++)
+    {
+        Serial.printf("%x", config.chaChaKey);
+    }
+    Serial.println();
+    Serial.print("- ChaCha auth: ");
+    for (byte i = 0; i < 16; i++)
+    {
+        Serial.printf("%x", config.chaChaAuth);
+    }
+    Serial.println();
 #endif
     Serial.println("----------------------");
 }
