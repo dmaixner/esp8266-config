@@ -8,7 +8,7 @@ This library provides data type `config_t`, which is generated according to dyna
 -D option name|generated fields in `config_t` type
 --------------|-----------------------------------
 _config_option_wifi|`char wifiSsid[20]`, `char wifiPass[20]`
-_config_option_thingspeak|`char thingspeakChannelId[10]`, `char thingspeakWriteKey[20]`, `byte thingspeakField`
+_config_option_thingspeak|`char thingspeakChannelId[10]`, `char thingspeakWriteKey[20]`, `char thingspeakReadKey[20]`
 _config_option_dallas|`byte dallasPin`
 _config_option_chacha|`byte chaChaKey[32]`, `byte chaChaAuth[16]`
 

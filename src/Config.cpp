@@ -26,7 +26,7 @@ void Config::printConfig(String label, config_t &config)
 #ifdef _config_option_thingspeak
     Serial.printf("- Thingspeak channel ID: %s\n", config.thingspeakChannelId);
     Serial.printf("- Thingspeak write key: %s\n", config.thingspeakWriteKey);
-    Serial.printf("- Thingspeak field: %d\n", config.thingspeakField);
+    Serial.printf("- Thingspeak read key: %s\n", config.thingspeakReadKey);
 #endif
 
 #ifdef _config_option_dallas

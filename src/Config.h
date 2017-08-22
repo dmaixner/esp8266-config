@@ -6,7 +6,7 @@
 /**
 * list of all config options:
 *       _config_option_wifi -- wifiSsid, wifiPass
-*       _config_option_thingspeak -- thingspeakChannelId, thingspeakWriteKey, thingspeakField
+*       _config_option_thingspeak -- thingspeakChannelId, thingspeakWriteKey, thingspeakReadKey
 *       _config_option_dallas -- dallasPin
 *       _config_option_chacha -- chaChaKey, chaChaAuth
 */
@@ -21,7 +21,7 @@ typedef struct config_struct
 #ifdef _config_option_thingspeak
     char thingspeakChannelId[10];
     char thingspeakWriteKey[20];
-    byte thingspeakField;
+    char thingspeakReadKey[20];
 #endif
 
 #ifdef _config_option_dallas
