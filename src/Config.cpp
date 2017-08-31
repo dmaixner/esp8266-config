@@ -46,6 +46,11 @@ void Config::printConfig(String label, config_t &config)
     }
     Serial.println();
 #endif
+
+#ifdef _config_option_relay
+    Serial.printf("- Relay pin: %d\n", config.dallasPin);
+#endif
+
     Serial.println("----------------------");
 }
 

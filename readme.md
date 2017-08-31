@@ -11,6 +11,7 @@ _config_option_wifi|`char wifiSsid[20]`, `char wifiPass[20]`
 _config_option_thingspeak|`char thingspeakChannelId[10]`, `char thingspeakWriteKey[20]`
 _config_option_dallas|`byte dallasPin`
 _config_option_chacha|`byte chaChaKey[32]`, `byte chaChaAuth[16]`
+_config_option_relay|`byte relayPin`
 
 
 Library also provides static methods in `Config` class for read/write those data from/to EEPROM and print information to Serial:

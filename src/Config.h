@@ -9,6 +9,7 @@
 *       _config_option_thingspeak -- thingspeakChannelId, thingspeakWriteKey
 *       _config_option_dallas -- dallasPin
 *       _config_option_chacha -- chaChaKey, chaChaAuth
+*       _config_option_relay -- relayPin
 */
 
 typedef struct config_struct
@@ -31,6 +32,11 @@ typedef struct config_struct
     byte chaChaKey[32];
     byte chaChaAuth[16];
 #endif
+
+#ifdef _config_option_relay
+    byte relayPin;
+#endif
+
 } config_t;
 
 class Config
