@@ -23,13 +23,15 @@ void Config::printConfig(String label, config_t &config)
     Serial.printf("- WiFi password: %s\n", config.wifiPass);
 #endif
 
-#ifdef _config_option_thingspeak
-    Serial.printf("- Thingspeak channel ID: %s\n", config.thingspeakChannelId);
-    Serial.printf("- Thingspeak write key: %s\n", config.thingspeakWriteKey);
-#endif
-
 #ifdef _config_option_dallas
     Serial.printf("- Dallas pin: %d\n", config.dallasPin);
+    Serial.printf("- Dallas counter: %d\n", config.dallasCounter);
+#ifdef _config_option_thingspeak
+    for (byte count = 0; count < config.dallasCounter; count++)
+    {
+        Serial.printf("- Thingspeak write key [%d]: %s\n", count, config.thingspeakWriteKey[count]);
+    }
+#endif
 #endif
 
 #ifdef _config_option_chacha
