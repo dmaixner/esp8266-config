@@ -8,6 +8,7 @@
 *       _config_option_wifi -- wifiSsid, wifiPass
 *       _config_option_dallas -- dallasCounter, dallasPin
 *       _config_option_dallas && _config_option_thingspeak -- thingspeakWriteKey
+*       _config_option_dallas && _config_option_post -- roomId
 *       _config_option_chacha -- chaChaKey, chaChaAuth
 *       _config_option_relay -- relayPin
 */
@@ -24,6 +25,9 @@ typedef struct config_struct
     byte dallasPin;
 #ifdef _config_option_thingspeak
     char thingspeakWriteKey[_config_option_dallas][20];
+#endif
+#ifdef _config_option_post
+    byte roomId[_config_option_dallas];
 #endif
 #endif
 

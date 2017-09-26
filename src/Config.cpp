@@ -32,6 +32,12 @@ void Config::printConfig(String label, config_t &config)
         Serial.printf("- Thingspeak write key [%d]: %s\n", count, config.thingspeakWriteKey[count]);
     }
 #endif
+#ifdef _config_option_post
+    for (byte count = 0; count < config.dallasCounter; count++)
+    {
+        Serial.printf("- Room ID [%d]: %d\n", count, config.roomId[count]);
+    }
+#endif
 #endif
 
 #ifdef _config_option_chacha
