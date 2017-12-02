@@ -12,7 +12,7 @@ _config_option_dallas|`byte dallasCounter`, `byte dallasPin`
 _config_option_dallas && _config_option_thingspeak|`char thingspeakWriteKey[_config_option_dallas][20]`
 _config_option_dallas && _config_option_post|`byte roomId[_config_option_dallas]`
 _config_option_chacha|`byte chaChaKey[32]`, `byte chaChaAuth[16]`
-_config_option_relay|`byte relayPin`
+_config_option_relay|`byte relayPin`, `byte relayId`
 
 
 Library also provides static methods in `Config` class for read/write those data from/to EEPROM and print information to Serial:

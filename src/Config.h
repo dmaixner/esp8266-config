@@ -10,7 +10,7 @@
 *       _config_option_dallas && _config_option_thingspeak -- thingspeakWriteKey
 *       _config_option_dallas && _config_option_post -- roomId
 *       _config_option_chacha -- chaChaKey, chaChaAuth
-*       _config_option_relay -- relayPin
+*       _config_option_relay -- relayPin, relayId
 */
 
 typedef struct config_struct
@@ -38,6 +38,7 @@ typedef struct config_struct
 
 #ifdef _config_option_relay
     byte relayPin;
+    byte relayId;
 #endif
 
 } config_t;
